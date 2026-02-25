@@ -16,21 +16,9 @@ class Car(Vehicle):
     def safety_check(self):
         return "Car safety check: Brakes, lights, and seatbelts OK"   
     
+class Motorcycle(Vehicle):
+    def __init__(self, make, model):
+        super().__init__(make, model)
 
-
-nissan_fairlady = Vehicle("Nissan", "Fairlady")
-car = Car("Ford", "Mustang")
-
-# print(f"""
-# Make = {car.make}
-# Model = {car.model}
-# Get info = {car.get_info()}
-# """)
-
-print(f"""
-Make = {car.make}
-Model = {car.model}
-Safety check = {car.safety_check()}
-Get info = {car.get_info()}
-""")
-
+    def safety_check(self):
+        return "Motorcycle safety check: Helmet required, engine OK"
